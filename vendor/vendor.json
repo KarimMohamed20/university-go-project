@@ -1,6 +1,5 @@
 {
 	"heroku": {
-        "install" : [ "./university-project" ],
         "goVersion": "go1.11"
          },
 	"comment": "",
