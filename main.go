@@ -4,7 +4,7 @@ import (
 	"github.com/gorilla/mux"
 	"log"
 	"net/http"
-
+	"os"
 )
 func main() {
 	r := mux.NewRouter().StrictSlash(true)
@@ -16,6 +16,6 @@ func main() {
 	r.PathPrefix("/files/").Handler(http.StripPrefix("/files/", http.FileServer(http.Dir("./files/"))))
 	r.PathPrefix("/swagger-ui/").Handler(http.StripPrefix("/swagger-ui/", http.FileServer(http.Dir("./swagger-ui/"))))
 
-	log.Fatal(http.ListenAndServe(":8010",r))
+	log.Fatal(http.ListenAndServe(":" + os.Getenv("PORT"),r))
 }
 
