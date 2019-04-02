@@ -6,7 +6,7 @@ schema:
 - name: university-project
   path: .
   args:
-  - server.go
+  - main.go
   commands:
     run:
       status: true
