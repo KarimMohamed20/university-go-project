@@ -1,0 +1,99 @@
+{ "swagger": "2.0",
+  "info": {
+    "description": "University project Mobile App Server",
+    "title": "University project API",
+    "version": "1.0"
+  },
+  "tags": [
+    {
+      "name":"Operations",
+      "description": "all operations API"
+    },
+    {
+      "name": "Status",
+      "description": "all status codes"
+    }
+
+  ],
+  "paths": {
+    "/operations": {
+      "get": {
+
+        "tags": [
+          "Operations"
+        ],
+
+        "responses": {
+          "200": {
+            "description": "Operation Data"
+          }
+        }
+      }
+    },
+     "/operation": {
+       "post": {
+         "tags": [
+           "Operations"
+         ],
+         "parameters": [
+           {
+             "type": "string",
+             "name":"Name",
+             "required": true,
+             "in": "formData"
+           },
+           {
+             "type": "integer",
+             "name": "Mobile",
+             "required": true,
+             "in": "formData"
+           },
+           {
+             "type": "string",
+             "name": "Address",
+             "required": true,
+             "in": "formData"
+           },
+           {
+             "type":"file",
+             "name": "File",
+             "required": true,
+             "in": "formData"
+           },
+           {
+             "type":"integer",
+             "name": "Date",
+             "required": true,
+             "in": "formData"
+           }
+
+         ],
+         "responses": {
+           "200": {
+             "description": "Operation you sent"
+           }
+         }
+       }
+  },
+    "/status": {
+      "get":{
+        "tags": [
+          "Status"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "header",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200":{
+            "description": "Show Code with Message"
+          }
+        }
+      }
+    }
+  }
+}
