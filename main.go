@@ -1,7 +1,6 @@
 package main
 
-import
-(
+import (
 	"github.com/gorilla/mux"
 	"log"
 	"net/http"
@@ -17,5 +16,5 @@ func main() {
 	r.PathPrefix("/files/").Handler(http.StripPrefix("/files/", http.FileServer(http.Dir("./files/"))))
 	r.PathPrefix("/swagger-ui/").Handler(http.StripPrefix("/swagger-ui/", http.FileServer(http.Dir("./swagger-ui/"))))
 
-	log.Fatal(http.ListenAndServe(":"+ os.Getenv("PORT"),r))
+	log.Fatal(http.ListenAndServe(":" + os.Getenv("PORT") ,r))
 }

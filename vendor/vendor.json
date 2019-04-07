@@ -1,7 +1,6 @@
 {
 	"comment": "",
 	"heroku": {
-
 		"goVersion": "go1.11"
 	},
 	"ignore": "test",
@@ -35,6 +34,18 @@
 			"path": "github.com/mattn/go-sqlite3",
 			"revision": "31f5bb843b7852e28d5a66d1d539c042c3bb623a",
 			"revisionTime": "2019-03-15T08:37:29Z"
+		},
+		{
+			"checksumSHA1": "6IzzHO9p32aHJhMYMwijccDUIVA=",
+			"path": "gopkg.in/alexcesaro/quotedprintable.v3",
+			"revision": "2caba252f4dc53eaf6b553000885530023f54623",
+			"revisionTime": "2015-07-16T17:19:45Z"
+		},
+		{
+			"checksumSHA1": "iq5WdjScmTU+LfNoerLuwcnXpdM=",
+			"path": "gopkg.in/gomail.v2",
+			"revision": "81ebce5c23dfd25c6c67194b37d3dd3f338c98b1",
+			"revisionTime": "2016-04-11T21:29:32Z"
 		}
 	],
 	"rootPath": "university-project"
